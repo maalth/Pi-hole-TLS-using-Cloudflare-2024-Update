@@ -37,7 +37,7 @@ You can add an account, but you need to install sudo. The commands are listed as
    - python3-certbot-dns-cloudflare
 
 ```
-   # apt get-install certbot lighttpd-mod-openssl python3-certbot-dns-cloudflare
+   # apt-get install certbot lighttpd-mod-openssl python3-certbot-dns-cloudflare
 ```
 
 7. Get your API key from Cloudflare if you haven't done it already.
