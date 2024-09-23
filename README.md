@@ -1,4 +1,4 @@
-# Setting up Pi-hole with renewable certificates using Cloudflare - 2024 Update
+### Setting up Pi-hole with renewable certificates using Cloudflare - 2024 Update
 
 This solution is adapated from a few older configurations. This works with a Debian 12 LXC within Proxmox. References will be included in the end.
 This is not a fully detailed document as this is meant to be short. I can write a full document in another location by reequest.
@@ -30,7 +30,13 @@ curl -sSL https://install.pi-hole.net | bash
 
 9. Transfer the script to your local machine. It will create your intial certificates, set up automatic certificate renewal and output a file that won't be overwritten when Pi-hole is updated.
 
-wget [https://github.com/maalth](https://github.com/maalth/Pihole-config-https/blob/main/Pi-Hole_Cloudflare_TLS.sh]
+
+wget https://github.com/maalth/Pihole-config-https/blob/main/Pi-Hole_Cloudflare_TLS.sh
+
+chmod +x Pi-Hole_Cloudflare_TLS.sh
+
+./Pi-Hole_Cloudflare_TLS.sh <email address> <domain name> <path to Cloudflare auth file>
+
  
 References
 https://github.com/Gestas/Pi-Hole-TLS-with-Cloudflare
