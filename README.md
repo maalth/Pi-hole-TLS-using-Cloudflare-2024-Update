@@ -30,7 +30,7 @@ curl -sSL https://install.pi-hole.net | bash
 
 9. Transfer the script to your local machine. It will create your intial certificates, set up automatic certificate renewal and output a file that won't be overwritten when Pi-hole is updated.
 
-wget
+wget https://
  
 References
 https://github.com/Gestas/Pi-Hole-TLS-with-Cloudflare
