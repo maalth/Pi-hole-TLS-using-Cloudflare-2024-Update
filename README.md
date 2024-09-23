@@ -63,7 +63,7 @@ You can add an account, but you need to install sudo. The commands are listed as
 12. Save the file and change the permission of cloudflare.ini file to 600
 
 ```
-   chmod 600 /etc/custom-config/.secrets/cloudflare.ini
+  # chmod 600 /etc/custom-config/.secrets/cloudflare.ini
 ```
 
 11. Transfer the script to your local machine. It will create your initial certificates, set up automatic certificate renewal and output the file external.conf that won't be overwritten whenever Pi-hole is updated.
