@@ -69,7 +69,7 @@ You can add an account, but you need to install sudo. The commands are listed as
 11. Transfer the script to your local machine. It will create your initial certificates, set up automatic certificate renewal and output the file external.conf that won't be overwritten whenever Pi-hole is updated.
 
 ```
-   # wget https://raw.githubusercontent.com/maalth/Pihole-config-https/blob/main/Pi-Hole_Cloudflare_TLS.sh
+   # wget https://github.com/maalth/Pihole-config-https/raw/main/Pi-Hole_Cloudflare_TLS.sh
 
    # chmod +x Pi-Hole_Cloudflare_TLS.sh
 
