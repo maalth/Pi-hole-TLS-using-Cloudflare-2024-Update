@@ -87,7 +87,7 @@ Once the script is complete, you have a couple of more things to do.
 13. Create a symbolic link in /etc/conf-enabled pointing to the external.conf  
 
 ```
-   # ln -sf /etc/lighttpd/conf-enabled/external.conf /etc/lighttpd/external.conf
+   # ln -sf /etc/lighttpd/external.conf /etc/lighttpd/conf-enabled/external.conf
 ```
 
 14. Edit /etc/lighttpd/lighttpd.conf then add "mod_openssl", to the server.modules section.
