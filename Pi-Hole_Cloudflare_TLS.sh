@@ -8,6 +8,7 @@
 
 # 22 Sep 2024
 # This file has been updated and tested with Debian 12 (bookworm) Proxmox LXC and Pi-Hole v5.18.3.
+# Credit goes to Gestas for writing the original script. 
 
 set -o errexit
 set -o pipefail
@@ -70,7 +71,7 @@ setup_lighttpd(){
     ssl.ca-file =  "/etc/letsencrypt/live/$MY_DOMAIN/fullchain.pem"
 	ssl.openssl.ssl-conf-cmd = ("MinProtocol" => "TLSv1.2") # (recommended to accept only TLSv1.2 and TLSv1.3)
 	
-	# The following lines have been commented out due to the paramaters being deprecated in a later version of lighthttpd.
+  # The next 4 lines have been commented out due to the paramaters being deprecated in a later version of lighthttpd.
     # ssl.honor-cipher-order = "enable"
     # ssl.cipher-list = "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH"
     # ssl.use-sslv2 = "disable"
