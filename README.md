@@ -24,30 +24,30 @@ dpkkg-reconfigure tzdata
 
 6. Install and configure Pi-hole and verify the web interface is working properly. Note, you need to set a static IP address.  
 
-```
-curl -sSL https://install.pi-hole.net | bash
-```
+   ```
+   curl -sSL https://install.pi-hole.net | bash
+   ```
 
 7. Install the following packages:
    - lighttpd-mod-openssl (pi-hole doesn't install mod-openssl by default)
    - certbot
    - python3-certbot-dns-cloudflare
  
- ```
- apt get-install certbot lighttpd-mod-openssl python3-certbot-dns-cloudflare
- ```
+    ```
+   apt get-install certbot lighttpd-mod-openssl python3-certbot-dns-cloudflare
+    ```
 
 8. Get your API key from Cloudflare. 
 
 9. Transfer the script to your local machine. It will create your initial certificates, set up automatic certificate renewal and output the file external.conf that won't be overwritten whenever Pi-hole is updated.
 
-```
-wget https://github.com/maalth/Pihole-config-https/blob/main/Pi-Hole_Cloudflare_TLS.sh
+   ```
+   wget https://github.com/maalth/Pihole-config-https/blob/main/Pi-Hole_Cloudflare_TLS.sh
 
-chmod +x Pi-Hole_Cloudflare_TLS.sh
+   chmod +x Pi-Hole_Cloudflare_TLS.sh
 
-./Pi-Hole_Cloudflare_TLS.sh <email address> <domain name> <path to Cloudflare auth file>
-```
+   ./Pi-Hole_Cloudflare_TLS.sh <email address> <domain name> <path to Cloudflare auth file>
+   ```
 
 Once the script is complete, you have a couple of more things to do.
 
@@ -57,21 +57,24 @@ Once the script is complete, you have a couple of more things to do.
 
 12. Create a symbolic link in /etc/conf-enabled pointing to the external.conf  
 
-```
-$ ln -sf /etc/lighttpd/conf-enable/external.conf /etc/lighttpd/external.conf
-```
+ ```
+   $ ln -sf /etc/lighttpd/conf-enable/external.conf /etc/lighttpd/external.conf
+ ```
 
 13. Edit /etc/lighttpd/lighttpd.conf then add "mod_openssl", to the server.modules section.
 
-```
-server.modules = (
-        "mod_indexfile",
-        "mod_access",
-        "mod_alias",
-        "mod_redirect",
-        "mod_openssl",
-)
-``` 
+   ```
+      server.modules = (
+           "mod_indexfile"
+      server.modules = (
+              "mod_indexfile",
+              "mod_access",
+              "mod_alias",
+              "mod_redirect",
+              "mod_openssl", <- ADD THIS LINE
+      )
+   ```      
+
 References  
 https://github.com/Gestas/Pi-Hole-TLS-with-Cloudflare   
 https://tech.borpin.co.uk/2019/03/22/letsencrypt-ssl-certificates-by-dns-challenge-with-lighttpd/
