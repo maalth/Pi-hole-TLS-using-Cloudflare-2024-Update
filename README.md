@@ -29,18 +29,19 @@ You can add an account, but you need to install sudo. The commands are listed as
 
 6. Install and configure Pi-hole and verify the web interface is working properly. Note, you need to set a static IP address.  
 
-   ```
+```
    curl -sSL https://install.pi-hole.net | bash
-   ```
+```
+
 
 7. Install the following packages:
    - lighttpd-mod-openssl (pi-hole doesn't install mod-openssl by default)
    - certbot
    - python3-certbot-dns-cloudflare
  
-    ```
+```
    apt get-install certbot lighttpd-mod-openssl python3-certbot-dns-cloudflare
-    ```
+```
 
 8. Get your API key from Cloudflare. 
 
