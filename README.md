@@ -58,7 +58,7 @@ You can add an account, but you need to install sudo. The commands are listed as
   
 ```
 
-10. Add this single line into cloudflare
+10. Add this single line into cloudflare.ini
 
 ```
    dns_cloudflare_api_token = (Your API token from Cloudflare)
