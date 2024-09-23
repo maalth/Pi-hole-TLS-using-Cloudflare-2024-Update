@@ -12,33 +12,25 @@ You can add an account, but you need to install sudo. The commands are listed as
    # apt update
    # apt upgrade
 ```
-
-
 3. (Optional) Reconfigure the timezone - the default is UTC
 
 ```
    # dpkkg-reconfigure tzdata
 ```
-
-
 4. Install curl
 
 ```
    # apt-get install curl
 ```
-
 5. Install and configure Pi-hole and verify the web interface is working properly. Note, you need to set a static IP address.  
 
 ```
    # curl -sSL https://install.pi-hole.net | bash
 ```
-
-
 6. Install the following packages:
    - lighttpd-mod-openssl (pi-hole doesn't install mod-openssl by default)
    - certbot
    - python3-certbot-dns-cloudflare
- 
 ```
    # apt get-install certbot lighttpd-mod-openssl python3-certbot-dns-cloudflare
 ```
@@ -50,21 +42,16 @@ You can add an account, but you need to install sudo. The commands are listed as
 ```
    # mkdir -p /etc/custom-config/.secrets
 ```
-
 9. Create and edit the ini file for your Cloudflare information. I use vi, you can use any editor you're comfortable with.
 
 ```
-   # vi /etc/custom-config/.secrets/cloudflare.ini
-  
+   # vi /etc/custom-config/.secrets/cloudflare.ini 
 ```
-
 10. Add this single line into cloudflare.ini
 
 ```
    dns_cloudflare_api_token = (Your API token from Cloudflare)
 ```
- 
-
 11. Transfer the script to your local machine. It will create your initial certificates, set up automatic certificate renewal and output the file external.conf that won't be overwritten whenever Pi-hole is updated.
 
 ```
@@ -82,7 +69,6 @@ Once the script is complete, you have a couple of more things to do.
 ``` 
    123.123.123.123 pi-hole.example.com pi-hole
 ```
-
 13. Create a symbolic link in /etc/conf-enabled pointing to the external.conf  
 
 ```
