@@ -4,7 +4,7 @@ This solution is adapted from a few older configurations. This works with a Debi
 This is not a fully detailed document as this is meant to be short. I can write a full document in another location by request.
 
 1. Configure a new LXC in Proxmox, there's plenty of instructions available. In a Proxmox LXC container, you're logged in as root by default.
-You can add an account, but you need to install sudo. The commands are listed assuming you're using the root account.
+You can add an account, but you need to install sudo. The commands are listed assuming you're using the root account. I added the sudo for convenience for those who don't.
 
 2. Update the container
 
