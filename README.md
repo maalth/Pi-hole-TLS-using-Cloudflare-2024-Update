@@ -41,7 +41,7 @@ You can add an account, but you need to install sudo. The commands are listed as
 
 7. Get your API key from Cloudflare if you haven't done it already.
 
-8. Pick a location to store your ini file. I suggest creating a .directory so it's not easily visible. The parent directory names doesn't matter. I like keep config files in /etc.
+8. Pick a location to store your ini file. I suggest creating a .directory so it's not easily visible. The parent directory names doesn't matter. I like keep config files in /etc because I back up that directory, especially when I have to do something exotic.
 
 ```
    # mkdir -p /etc/custom-config/.secrets
